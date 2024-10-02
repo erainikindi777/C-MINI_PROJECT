@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management System</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+h1 {
+text-align: center;
+}
+form {
+display: flex;
+flex-direction: column;
+max-width: 300px;
+margin: 20px auto;
+}
+input, select {
+margin-bottom: 10px;
+padding: 5px;
+}
+button {
+padding: 8px;
+background-color: #4CAF50;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+14 | Page
+
+button:hover {
+background-color: #45a049;
+}
+.output {
+margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1>Student Management System</h1>
+
+<form id="studentForm">
+<label for="choice">Select an option:</label>
+<select id="choice" name="choice">
+<option value="1">Add Student</option>
+<option value="2">View Students</option>
+<option value="3">Exit</option>
+</select>
+<button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<div id="output" class="output"></div>
+
+<script>
+function submitForm() {
+var choice = document.getElementById("choice").value;
+var outputDiv = document.getElementById("output");
+
+outputDiv.innerHTML = "<p>User chose option " + choice + ".</p>";
+}
+</script>
+
+</body>
+</html>
